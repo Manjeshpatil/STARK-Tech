@@ -1,0 +1,495 @@
+
+/* ------------this is for all common ------------*/
+
+ a{
+    text-decoration: none;
+    color: white;   
+}
+body{
+    margin: 0px;
+    background-color: #010112;
+    color: white;   
+}
+li a{
+    text-decoration: none;
+}
+
+
+/*----------------search bar------------- */
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid  #ff0000;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #ff0000  ;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #ff0000;
+    background:  #ff0000;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*----Resize the wrap to see the search bar change!-----*/
+  .wrap{
+    display: flex;
+    width: 33%;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+/*---------- this is for logo nav--------------------- */
+
+.logo-bar{
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  width:100px;
+  height:100px;
+  padding-left:4em;
+  padding-top:1.5em;
+}
+.logo-user{
+    display: flex;
+    justify-content: end;
+    padding:20px;
+   
+
+}
+.logo-image input[type=text]{
+    border: 1px solid #ccc; 
+}
+
+.logo-user .logo-button{
+   padding: 10px;
+    margin:10px;
+}
+.logo-button:hover{
+    transform: scale(1.1);
+    color:red;
+    transition: ease .7s;
+  
+}
+
+.logo-image{
+    color: white;
+    width:fit-content;
+    height: fit-content;
+    
+
+}
+.nav{
+  position: -webkit-sticky;
+	position: sticky;
+	top: 5px;
+  z-index: 1000;
+}
+
+
+/* nav-bar */
+
+
+/*------------- Menu Dropdown-------------- */
+
+
+.menu,
+.submenu {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+.menu {   
+ margin: 50px auto;
+ width: 800px;   
+ width: -moz-fit-content;
+ width: -webkit-fit-content;
+ width: fit-content; 
+ position: sticky;
+ top: 5px;
+ 
+
+ 
+}
+
+.menu > li {
+ background: #000;
+ float: left;
+ position: relative;
+ transform: skewX(25deg);
+}
+
+.menu a {
+ display: block;
+ color: #fff;
+ text-transform: uppercase;
+ text-decoration: none;
+ font-family: Arial, Helvetica;
+ font-size: 14px;
+}  
+
+.menu li:hover {
+ background: #ff0000;
+}  
+
+.menu > li > a {
+ transform: skewX(-25deg);
+ padding: 1em 2em;
+}
+
+/* ----------------Dropdown ---------------*/
+.submenu {
+ position: absolute;
+ width: 200px;
+ left: 50%; margin-left: -100px;
+ transform: skewX(-25deg);
+ transform-origin: left top;
+
+}
+
+.submenu li {
+ background-color: #34495e;
+ position: relative;
+ overflow: hidden;  
+}      
+
+.submenu > li > a {
+ padding: 1em 2em;   
+}
+
+.submenu > li::after {
+ content: '';
+ position: absolute;
+ top: -125%;
+ height: 100%;
+ width: 100%;   
+ box-shadow: 0 0 50px rgba(255, 81, 0, 0.9);   
+ 
+}  
+
+.submenu > li:nth-child(odd){
+ transform: skewX(-25deg) translateX(0);
+ transition: ease 1s;
+}
+
+.submenu > li:nth-child(odd) > a {
+ transform: skewX(25deg);
+ transition: ease 1s;
+}
+
+.submenu > li:nth-child(odd)::after {
+ right: -50%;
+ transform: skewX(-25deg) rotate(3deg);
+ 
+}    
+
+.submenu > li:nth-child(even){
+ transform: skewX(25deg) translateX(0);
+ transition: ease 1s;
+}
+
+.submenu > li:nth-child(even) > a {
+ transform: skewX(-25deg);
+
+}
+
+.submenu > li:nth-child(even)::after {
+ left: -50%;
+ transform: skewX(25deg) rotate(3deg);
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*--------------- Show dropdown------------------- */
+.submenu,
+.submenu li {
+ opacity: 0;
+ visibility: hidden;   
+}
+
+.submenu li {
+ transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+ opacity: 1;
+ visibility: visible;
+}  
+
+.menu > li:hover .submenu li:nth-child(even){
+ transform: skewX(25deg) translateX(15px);   
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+ transform: skewX(-25deg) translateX(-15px);   
+}
+
+.nav{
+  margin-bottom:150px;
+}
+
+
+/*------------- one-pc------------------- */
+.one-pc{
+  width:800px;
+  height:500px;
+  margin:200px auto;
+  border: solid 1px #ff100c;
+  
+  position:relative;
+  
+}
+
+.one-pc .one-pc-image{
+  width:650px;
+  height:450px;
+  margin:auto;
+  margin-left:80px;
+  position:absolute;
+  
+}
+.one-pc .pc-button{
+  font-family: cursive;
+  width: 110px;
+  height: 35px;
+  border-color: solid 2px red;
+  background-color: orange;
+  color: white;
+  }
+
+
+.one-pc .pc-content{
+  position:absolute;
+  right:40px;
+  top:410px;
+  z-index: 100;
+}
+
+
+/*-------------- main page slideshow --------------*/
+.main-page-slides{
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;;
+  margin:100px;
+}
+
+.slides{
+  max-width: 700px;
+  margin: auto;
+  height: max-content;
+}
+.mySlides {
+display:none;
+margin:auto;
+width:100%;
+
+}
+
+
+
+/*------------------- footer--------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  color: #d9d9d9;
+  font-family: 'Poppins', sans-serif;
+}
+.content1{
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.content1 .text{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #202020;
+}
+.content1 .p{
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: #202020;
+}
+footer{
+ 
+  bottom: 0px;
+  width: 100%;
+  background-color: #010112;
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover{
+  background: #f12020;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  background: #f12020;
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  background-color: #010112;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background-color: #020202;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input, .right form textarea:hover{
+  outline-color: #3498db;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.right form .btn button:hover{
+  background: #000;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #000000;
+}
+.bottom center span{
+  color: #ffffff;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
